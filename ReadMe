@@ -1,0 +1,4 @@
+In this pattern:
+- we define our model as a POJO    -->  here : User
+- we define an interface for CRUD operations. input/output are of type object  -->  here: DAO
+- we implement interface --->  here : UserDAO
