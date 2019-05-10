@@ -2,3 +2,17 @@ In this pattern:
 - we define our model as a POJO    -->  here : User
 - we define an interface for CRUD operations. input/output are of type object  -->  here: DAO
 - we implement interface --->  here : UserDAO
+
+#difference between DAO and Repository pattern
+Note that both patterns really mean the same (they store data and they abstract the access to it and they are both expressed closer
+to the domain model and hardly contain any DB reference), but the way they are used can be slightly different, 
+DAO being a bit more flexible/generic, while Repository is a bit more specific and restrictive to a type only.
+
+The pattern doesn't restrict you to store data of the same type, thus you can easily have a DAO that locates/stores related objects.
+
+E.g. you can easily have UserDao that exposes methods like
+
+Collection<Permission> findPermissionsForUser(String userId)
+User findUser(String userId)
+Collection<User> findUsersForPermission(Permission permission)
+All those are related to User (and security) and can be specified under then same DAO. This is not the case for Repository.
