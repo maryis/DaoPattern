@@ -18,3 +18,5 @@ Collection<User> findUsersForPermission(Permission permission)
 All those are related to User (and security) and can be specified under then same DAO. This is not the case for Repository.
 
 So this example can be seen as Repo or Dao pattern, but as it is related to one type, we better can call it REPOSITORY pattern 
+
+**notice: I added two DAOManager* files which includes code for getting a db connection. these codes have not been used in my project
