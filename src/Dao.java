@@ -5,6 +5,8 @@ import java.util.Optional;
  * Created by User on 5/5/2019.
  */
 public interface Dao<T> {
+    
+    // connection  or  EntityManager
 
     Optional<T> get(long id);
 
